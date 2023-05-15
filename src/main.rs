@@ -10,7 +10,7 @@ struct Task {
 }
 
 fn main() {
-    let mut tasks: Vec<Task> = Vec::new();
+    let mut tasks: Vec<Task>;
     let content_file = read_file();
     let json_value: Result<Vec<Task>, serde_json::Error> = serde_json::from_str(&content_file);
 
